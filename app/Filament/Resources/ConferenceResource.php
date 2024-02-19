@@ -31,12 +31,14 @@ class ConferenceResource extends Resource
                 ->required()
                 ->maxLength(60),
             Forms\Components\MarkdownEditor::make('description')
-                ->helperText('Hello'),
+                ->helperText('Hello')
+                ->required()
+                ,
             Forms\Components\DateTimePicker::make('start_date')
-                // ->native(false)
+                ->native(false)
                 ->required(),
             Forms\Components\DateTimePicker::make('end_date')
-                // ->native(false)
+                ->native(false)
                 ->required(),
             Forms\Components\Checkbox::make('is_published')
                 ->default(true),
